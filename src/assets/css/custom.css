@@ -1,0 +1,22 @@
+.nav-item {
+  position: relative;
+}
+.nav-item::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  border-radius: 20px;
+  bottom: -4px;
+  opacity: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f9cada;
+  transition: 0.5s;
+}
+
+@media only screen and (min-width: 1024px) {
+  .nav-item:hover::after {
+    opacity: 1;
+    width: 100%;
+  }
+}
