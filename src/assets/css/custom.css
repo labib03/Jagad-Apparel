@@ -1,6 +1,12 @@
+/* Custom Navbar style */
 .nav-item {
   position: relative;
 }
+
+.nav-item_link {
+  transition: 0.3s;
+}
+
 .nav-item::after {
   content: " ";
   position: absolute;
@@ -13,10 +19,16 @@
   background-color: #f9cada;
   transition: 0.5s;
 }
+/* End of Custom Navbar style */
 
 @media only screen and (min-width: 1024px) {
+  /* custom navbar style */
+  .nav-item:hover .nav-item_link {
+    color: #f9cada;
+  }
   .nav-item:hover::after {
     opacity: 1;
     width: 100%;
   }
+  /* end custom navbar style */
 }

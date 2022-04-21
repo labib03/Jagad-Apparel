@@ -23,7 +23,7 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/showcase"}
-                    className="text-black lg:tracking-wider md:text-white"
+                    className="nav-item_link text-black lg:tracking-wider md:text-white"
                   >
                     Showcase
                   </Link>
@@ -31,7 +31,7 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/catalog"}
-                    className="text-black lg:tracking-wider md:text-white"
+                    className="nav-item_link text-black lg:tracking-wider md:text-white"
                   >
                     Catalog
                   </Link>
@@ -39,7 +39,7 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/delivery"}
-                    className="text-black lg:tracking-wider md:text-white"
+                    className="nav-item_link text-black lg:tracking-wider md:text-white"
                   >
                     Delivery
                   </Link>
@@ -47,7 +47,7 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/rewards"}
-                    className="text-black lg:tracking-wider md:text-white"
+                    className="nav-item_link text-black lg:tracking-wider md:text-white"
                   >
                     Rewards
                   </Link>
