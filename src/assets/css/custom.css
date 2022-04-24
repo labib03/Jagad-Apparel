@@ -3,6 +3,19 @@
   position: relative;
 }
 
+.nav-item_title::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f9cada;
+  position: absolute;
+  bottom: 0;
+  right: -7px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
 .nav-item_link {
   transition: 0.3s;
 }
@@ -29,6 +42,13 @@
   .nav-item:hover::after {
     opacity: 1;
     width: 100%;
+  }
+  /* end custom navbar style */
+}
+@media only screen and (max-width: 470px) {
+  /* custom navbar style */
+  .nav-item_title::after {
+    display: none;
   }
   /* end custom navbar style */
 }

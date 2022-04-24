@@ -2,17 +2,22 @@ import React from "react";
 import "../assets/css/custom.css";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ theme, position }) {
   return (
     <>
-      <header className="absolute w-full z-50 px-4">
+      <header className={`${position} w-full z-50 px-4`}>
         <div className="container mx-auto py-5">
           <div className="flex flex-stretch items-center">
-            <div className="w-56 items-center flex">
-              <img
-                src="images/content/logo.png"
-                alt="Luxspace | Fulfill your house with beautiful furniture"
-              />
+            <div className="w-full flex">
+              <Link to={"/"}>
+                <h1 className="nav-item_title h-full tracking-wider relative uppercase text-xl font-semibold">
+                  Jagad Apparel
+                </h1>
+                {/* <img
+                  src="/images/content/logo.png"
+                  alt="Luxspace | Fulfill your house with beautiful furniture"
+                /> */}
+              </Link>
             </div>
             <div className="w-full"></div>
             <div className="w-auto">
@@ -22,8 +27,15 @@ export default function Header() {
               >
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
-                    to={"/showcase"}
-                    className="nav-item_link text-black lg:tracking-wider md:text-white"
+                    to={"/categories/71"}
+                    className={`
+                      nav-item_link ${
+                        theme === "white"
+                          ? "text-black lg:tracking-wider md:text-white"
+                          : "text-white lg:tracking-wider md:text-black"
+                      }
+                    `}
+                    activeClassName="bg-red-100"
                   >
                     Showcase
                   </Link>
@@ -31,7 +43,13 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/catalog"}
-                    className="nav-item_link text-black lg:tracking-wider md:text-white"
+                    className={`
+                      nav-item_link ${
+                        theme === "white"
+                          ? "text-black lg:tracking-wider md:text-white"
+                          : "text-white lg:tracking-wider md:text-black"
+                      }
+                    `}
                   >
                     Catalog
                   </Link>
@@ -39,7 +57,13 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/delivery"}
-                    className="nav-item_link text-black lg:tracking-wider md:text-white"
+                    className={`
+                      nav-item_link ${
+                        theme === "white"
+                          ? "text-black lg:tracking-wider md:text-white"
+                          : "text-white lg:tracking-wider md:text-black"
+                      }
+                    `}
                   >
                     Delivery
                   </Link>
@@ -47,7 +71,13 @@ export default function Header() {
                 <li className="nav-item mx-3 lg:mx-4 py-6 md:py-0">
                   <Link
                     to={"/rewards"}
-                    className="nav-item_link text-black lg:tracking-wider md:text-white"
+                    className={`
+                      nav-item_link ${
+                        theme === "white"
+                          ? "text-black lg:tracking-wider md:text-white"
+                          : "text-white lg:tracking-wider md:text-black"
+                      }
+                    `}
                   >
                     Rewards
                   </Link>
@@ -76,7 +106,12 @@ export default function Header() {
                 <li className="ml-6">
                   <Link
                     id="header-cart"
-                    className="flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 lg:p-2 lg:hover:bg-pink-400 lg:hover:text-black rounded-full transition-all duration-500 text-black md:text-white"
+                    className={[
+                      "flex items-center justify-center w-8 h-8 lg:w-10 lg:h-10 lg:p-2 lg:hover:bg-pink-400 rounded-full transition-all duration-500",
+                      theme === "white"
+                        ? "text-black lg:tracking-wider md:text-white lg:hover:text-black"
+                        : "text-white lg:tracking-wider md:text-black lg:hover:text-white",
+                    ]}
                     to={"/cart"}
                   >
                     <svg
