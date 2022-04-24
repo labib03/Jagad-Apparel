@@ -3,8 +3,7 @@ import Footer from "../parts/Footer";
 import Header from "../parts/Header";
 import Breadcrumb from "../components/Breadcrumb";
 import Sitemap from "../parts/Sitemap";
-import ShoppingCart from "../parts/Cart/ShoppingCart";
-import ShoppingDetails from "../parts/Cart/ShoppingDetails";
+
 import Success from "../parts/Success/Success";
 
 export default function Congratulation() {

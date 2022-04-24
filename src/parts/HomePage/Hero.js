@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import useScrollAnchor from "../../helpers/hooks/useScrollAnchor";
 
 export default function Hero() {
+  useScrollAnchor();
   return (
     <section className="flex items-center hero">
       <div className="w-full absolute z-20 inset-0 md:relative md:w-1/2 text-center flex flex-col justify-center hero-caption">
@@ -15,12 +16,12 @@ export default function Hero() {
           membuat ruangan terasa homey
         </h2>
         <div>
-          <Link
-            to={"/browse-the-room"}
+          <a
+            href="#browse-the-room"
             className="bg-pink-400 text-black hover:shadow-none rounded-full md:shadow-lg tracking-wider px-8 py-3 mt-4 inline-block flex-none transition duration-200"
           >
             Explore Now
-          </Link>
+          </a>
         </div>
       </div>
       <div className="w-full inset-0 md:relative md:w-1/2">
@@ -29,9 +30,10 @@ export default function Hero() {
           <div className="overlay right-0 bottom-0 md:inset-0">
             <button
               className="video hero-cta focus:outline-none z-30 modal-trigger"
-              data-content='<div className="w-screen pb-56 md:w-88 md:pb-56 relative z-50">
-              <div className="absolute w-full h-full">
+              data-content='<div class="w-screen pb-56 md:w-full md:h-full md:rounded-md relative z-50">
+              <div class="absolute w-full h-full md:rounded-md">
                 <iframe
+                class="md:rounded-md"
                   width="100%"
                   height="100%"
                   src="https://www.youtube.com/embed/3h0_v1cdUIA"
