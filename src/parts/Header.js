@@ -35,7 +35,6 @@ export default function Header({ theme, position }) {
                           : "text-white lg:tracking-wider md:text-black"
                       }
                     `}
-                    activeClassName="bg-red-100"
                   >
                     Showcase
                   </Link>
