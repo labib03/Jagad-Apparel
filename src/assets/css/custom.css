@@ -34,6 +34,22 @@
 }
 /* End of Custom Navbar style */
 
+/* Custom Style Browse Room */
+.loading-preview {
+  @apply bg-gray-300;
+  animation: loading 1s infinite ease;
+}
+
+@keyframes loading {
+  from {
+    background-color: #dddddd;
+  }
+  to {
+    background-color: #eeeeee;
+  }
+}
+/* End of Custom Style Browse Room */
+
 @media only screen and (min-width: 1024px) {
   /* custom navbar style */
   .nav-item:hover .nav-item_link {
